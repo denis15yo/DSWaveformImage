@@ -3,6 +3,7 @@ import AVFoundation
 import CoreGraphics
 
 /// Renders a DSImage of the waveform data calculated by the analyzer.
+@available(iOS 15.0, *)
 public class WaveformImageDrawer: ObservableObject {
     public enum GenerationError: Error { case generic }
 
@@ -58,6 +59,7 @@ public class WaveformImageDrawer: ObservableObject {
     }
 }
 
+@available(iOS 15.0, *)
 extension WaveformImageDrawer {
     /// Renders the waveform from the provided samples into the provided `CGContext`.
     ///
@@ -122,6 +124,7 @@ extension WaveformImageDrawer {
 
 // MARK: Image generation
 
+@available(iOS 15.0, *)
 private extension WaveformImageDrawer {
     func render(
         fromAudioAt audioAssetURL: URL,
@@ -150,6 +153,7 @@ private extension WaveformImageDrawer {
 
 // MARK: - Helpers
 
+@available(iOS 15.0, *)
 private extension WaveformImageDrawer {
     private func stripeCount(_ configuration: Waveform.Configuration) -> Int {
         if case .striped = configuration.style {

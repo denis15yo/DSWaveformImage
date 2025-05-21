@@ -4,6 +4,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
+@available(iOS 15.0, *)
 public class WaveformImageView: UIImageView {
     private let waveformImageDrawer: WaveformImageDrawer
 
@@ -39,6 +40,7 @@ public class WaveformImageView: UIImageView {
     }
 }
 
+@available(iOS 15.0, *)
 private extension WaveformImageView {
     func updateWaveform() {
         guard let audioURL = waveformAudioURL else { return }

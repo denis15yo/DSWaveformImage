@@ -2,6 +2,7 @@ import Foundation
 import DSWaveformImage
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct DefaultShapeStyler {
     @ViewBuilder
     func style(shape: WaveformShape, with configuration: Waveform.Configuration) -> some View {

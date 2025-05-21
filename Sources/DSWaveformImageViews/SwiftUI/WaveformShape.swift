@@ -34,6 +34,7 @@ public struct WaveformShape: Shape {
     }
 }
 
+@available(iOS 15.0, *)
 private extension WaveformShape {
     private func damp(_ samples: [Float], with configuration: Waveform.Configuration) -> [Float] {
         guard let damping = configuration.damping, damping.percentage > 0 else {

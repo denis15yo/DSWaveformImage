@@ -79,6 +79,7 @@ public struct WaveformView<Content: View>: View {
     }
 }
 
+@available(iOS 15.0, *)
 public extension WaveformView {
     /**
      Creates a new WaveformView which displays a waveform for the audio at `audioURL`.

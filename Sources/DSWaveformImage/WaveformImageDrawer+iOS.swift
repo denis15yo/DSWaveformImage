@@ -4,6 +4,7 @@ import AVFoundation
 import UIKit
 import CoreGraphics
 
+@available(iOS 15.0, *)
 public extension WaveformImageDrawer {
     /// Renders a DSImage of the provided waveform samples.
     ///

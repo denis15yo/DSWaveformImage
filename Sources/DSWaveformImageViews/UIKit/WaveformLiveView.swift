@@ -4,6 +4,7 @@ import Foundation
 import UIKit
 
 /// Renders a live waveform everytime its `(0...1)`-normalized samples are changed.
+@available(iOS 15.0, *)
 public class WaveformLiveView: UIView {
 
     /// Default configuration with damping enabled.
@@ -96,6 +97,7 @@ public class WaveformLiveView: UIView {
     }
 }
 
+@available(iOS 15.0, *)
 class WaveformLiveLayer: CALayer {
     @NSManaged var samples: [Float]
 

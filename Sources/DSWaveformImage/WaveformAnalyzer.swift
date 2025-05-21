@@ -17,6 +17,7 @@ struct WaveformAnalysis {
 }
 
 /// Calculates the waveform of the initialized asset URL.
+@available(iOS 15.0, *)
 public struct WaveformAnalyzer: Sendable {
     public enum AnalyzeError: Error { case generic, userError, emptyTracks, readerError(AVAssetReader.Status) }
 
@@ -64,6 +65,7 @@ public struct WaveformAnalyzer: Sendable {
 
 // MARK: - Private
 
+@available(iOS 15.0, *)
 fileprivate extension WaveformAnalyzer {
     func waveformSamples(
             track audioAssetTrack: AVAssetTrack,
@@ -239,6 +241,7 @@ fileprivate extension WaveformAnalyzer {
 
 // MARK: - Configuration
 
+@available(iOS 15.0, *)
 private extension WaveformAnalyzer {
     func outputSettings() -> [String: Any] {
         return [
